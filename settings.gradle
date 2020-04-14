@@ -1,0 +1,2 @@
+include ':app', ':jzfixlanguage'
+rootProject.name='JzFixLanguageSample'
