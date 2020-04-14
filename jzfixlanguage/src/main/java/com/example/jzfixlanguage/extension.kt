@@ -5,6 +5,8 @@ import android.content.res.Resources
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import com.example.jzfixlanguage.function.Companion.getAllChildViews
 import com.jzsql.lib.mmySql.Sql_Result
@@ -15,6 +17,11 @@ fun View.fixLanguage(){
         Log.e("view","$i")
         if(i is TextView){
            i.text=i.text.toString().getFix()
+        }else if(i is Button){
+            i.text=i.text.toString().getFix()
+        }else if(i is EditText){
+            i.setText(i.text.toString().getFix())
+            i.hint=i.hint.toString().getFix()
         }
     }
 }
