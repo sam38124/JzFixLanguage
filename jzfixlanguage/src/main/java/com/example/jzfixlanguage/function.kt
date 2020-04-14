@@ -13,7 +13,6 @@ class function{
                 for (i in 0 until view.childCount) {
                     val viewchild = view.getChildAt(i)
                     allchildren.add(viewchild)
-                    Log.d("ChildView", "$viewchild")
                     allchildren.addAll(getAllChildViews(viewchild))
                 }
             }
